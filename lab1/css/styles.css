@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto:wght@300&display=swap');
+
+html{
+    background-color:#7fc7bb;
+}
+
+header {
+  background-color: #0077b6;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: lightblue;
+  text-decoration: none;
+  padding: 20px;
+}
+
+p{
+  color: lightblue;
+}
+
+img {
+  height: 400px;
+  width: 100%;
+  grid-area: one;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  row-gap:10px;
+  column-gap: 15px;
+  padding: 15px;
+  grid-template-areas:
+        ". ."
+        "one one"
+        "one one"
+        "one one"
+        "one one"
+        "two three"
+        "two three"
+        ". .";
+}
+
+#cheese{
+  font-family: 'Roboto', sans-serif;
+}
+
+.list1 dt{
+  font-weight:bolder;
+  font-size:larger;
+}
+
+.list1 dd{
+  font-style:italic;
+}
+
+.child p{
+  color:black;
+  font-size:larger;
+  font-weight:bolder;
+  text-decoration-line:underline;
+}
+
+#child1{
+  grid-area:two;
+}
+
+#child2{
+  grid-area:three;
+}
+
+.child {
+  background-color: #41b3a3;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  background-color: #0077b6;
+  color: lightblue;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+@media only screen and (max-width:600px){
+  img{
+    height:200px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(8, 1fr);
+    row-gap:15px;
+    column-gap: 15px;
+    padding: 15px;
+    grid-template-areas:
+          ". . . . . ."
+          "one one one one one one"
+          "one one one one one one"
+          "two two two two two two"
+          "two two two two two two"
+          "three three three three three three"
+          "three three three three three three"
+          ". . . . . ."
+  }
+}
